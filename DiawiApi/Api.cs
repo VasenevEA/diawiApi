@@ -2,7 +2,7 @@
 
 namespace DiawiApi
 {
-    public class Class1
+    public class Api
     {
     }
 }
