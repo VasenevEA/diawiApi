@@ -2,12 +2,8 @@
 
 namespace DiawiApi.Models
 {
-    public class ReadyResponse
+    public class ReadyResponse : Response
     {
-        [JsonProperty("status")]
-        public string Status { get; set; }
-        [JsonProperty("message")]
-        public string Message { get; set; }
         [JsonProperty("hash")]
         public string Hash { get; set; }
         [JsonProperty("link")]

@@ -1,4 +1,5 @@
-﻿using Refit;
+﻿using DiawiApi.Models;
+using Refit;
 using System;
 using System.Collections.Generic;
 using System.IO;
@@ -33,7 +34,7 @@ namespace DiawiApi
 
         [Multipart]
         [Post("/")]
-        Task<object> Upload(string token, [AliasAs("file")] StreamPart file);
+        Task<JobKeyResponse> Upload(string token, [AliasAs("file")] StreamPart file);
 
         [Get("/status?token={token}&job={job}")]
         /// <summary>
@@ -42,6 +43,6 @@ namespace DiawiApi
         /// <param name="token">your API access token</param>
         /// <param name="jobKey">the u  pload job hash from the upload response</param>
         /// <returns>Error/Processing/Ready response</returns>
-        Task<object> GetStatus(string token, string job);
+        Task<Response> GetStatus(string token, string job);
     }
 }

@@ -2,10 +2,10 @@
 
 namespace DiawiApi.Models
 {
-    public class ProcessingResponse
+    public class Response
     {
         [JsonProperty("status")]
-        public string Status { get; set; }
+        public StatusCode Status { get; set; }
         [JsonProperty("message")]
         public string Message { get; set; }
     }
