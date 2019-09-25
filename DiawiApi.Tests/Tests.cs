@@ -1,10 +1,9 @@
-﻿using System;
+﻿using DiawiApi.Models;
+using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Refit;
 using System.IO;
 using System.Net.Http;
 using System.Threading.Tasks;
-using DiawiApi.Models;
-using Microsoft.VisualStudio.TestTools.UnitTesting;
-using Refit;
 
 namespace DiawiApi.Tests
 {
@@ -12,12 +11,14 @@ namespace DiawiApi.Tests
     public class Tests
     {
         string token = "diawi token";
+
         IApi api;
-        HttpClient client;
+        ApiFactory factory;
+
         public Tests()
         {
-            client = new HttpClient() { BaseAddress = new Uri("https://upload.diawi.com/") };
-            api = RestService.For<IApi>(client);
+            factory = new ApiFactory();
+            api = factory.GetApi(new HttpClient());
         }
 
         [TestMethod]
@@ -27,7 +28,7 @@ namespace DiawiApi.Tests
             var result = await api.Upload(token, new StreamPart(stream, stream.Name, ""));
 
             Assert.IsNotNull(result);
-            Assert.IsFalse(string.IsNullOrEmpty(result.JobKey)); 
+            Assert.IsFalse(string.IsNullOrEmpty(result.JobKey));
         }
 
         [TestMethod]
@@ -50,7 +51,7 @@ namespace DiawiApi.Tests
         [TestMethod]
         public async Task Upload_CheckRequestException()
         {
-            client.BaseAddress = new Uri("http://noway");
+            var api = factory.GetApi(new HttpClient(), "http://noway");
             await Assert.ThrowsExceptionAsync<HttpRequestException>(() => api.Upload(token, null));
         }
     }
