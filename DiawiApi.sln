@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27428.2037
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiawiApi", "DiawiApi\DiawiApi.csproj", "{70B615EB-6658-410C-ADE5-ED4FB37F8901}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DiawiApi", "DiawiApi\DiawiApi.csproj", "{70B615EB-6658-410C-ADE5-ED4FB37F8901}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiawiApi.Tests", "DiawiApi.Tests\DiawiApi.Tests.csproj", "{9E614A46-E851-4B1D-A634-9322DF0CFA26}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{70B615EB-6658-410C-ADE5-ED4FB37F8901}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{70B615EB-6658-410C-ADE5-ED4FB37F8901}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{70B615EB-6658-410C-ADE5-ED4FB37F8901}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9E614A46-E851-4B1D-A634-9322DF0CFA26}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9E614A46-E851-4B1D-A634-9322DF0CFA26}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9E614A46-E851-4B1D-A634-9322DF0CFA26}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9E614A46-E851-4B1D-A634-9322DF0CFA26}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
