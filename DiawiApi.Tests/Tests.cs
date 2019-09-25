@@ -10,7 +10,7 @@ namespace DiawiApi.Tests
     [TestClass]
     public class Tests
     {
-        string token = "diawi token";
+        string token = "your api token from https://dashboard.diawi.com/profile/api";
 
         IApi api;
         ApiFactory factory;
