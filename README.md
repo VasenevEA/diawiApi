@@ -2,7 +2,7 @@
 
 .Net Standart 2.0 library for [diawi](https://www.diawi.com/)'s API
 
-![Nuget](https://img.shields.io/nuget/v/diawi.api)
+[![Nuget](https://img.shields.io/nuget/v/diawi.api)](https://www.nuget.org/packages/diawi.api/)
 
 ## Install
 
@@ -25,3 +25,4 @@ var status = await api.GetStatus(token, result.JobKey);
 
 ```
   
+]
