@@ -24,5 +24,3 @@ var result = await api.Upload(token, new StreamPart(stream, stream.Name, ""));
 var status = await api.GetStatus(token, result.JobKey);
 
 ```
-  
-]
