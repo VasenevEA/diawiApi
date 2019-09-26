@@ -2,6 +2,10 @@
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageId>diawi.api</PackageId>
+    <Authors>vasenev.ea</Authors>
+    <Description>Upload API interface</Description>
   </PropertyGroup>
 
   <ItemGroup>
