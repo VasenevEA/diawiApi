@@ -7,7 +7,7 @@
 ## Install
 
 ```sh
-Install-Package diawi.api -Version 1.0.0
+Install-Package diawi.api -Version 1.1.0
 ```
 
 ## Example
