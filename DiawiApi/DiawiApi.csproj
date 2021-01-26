@@ -5,7 +5,8 @@
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
     <PackageId>diawi.api</PackageId>
     <Authors>vasenev.ea</Authors>
-    <Description>Upload API interface</Description>
+    <Description>Add links info</Description>
+    <Version>1.1.0</Version>
   </PropertyGroup>
 
   <ItemGroup>
